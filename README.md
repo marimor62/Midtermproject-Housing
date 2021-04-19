@@ -1,6 +1,6 @@
 # Case Study: Regression
 
-![real-state-project.jpeg](attachment:file-20191203-67028-qfiw3k.jpeg)
+![real-state-project.jpeg](https://github.com/marimor62/Midtermproject-Housing/blob/main/real-state-project.jpeg?raw=true)
 
 #### Scenario
 
