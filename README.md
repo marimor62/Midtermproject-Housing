@@ -2,15 +2,15 @@
 
 ![real-state-project.jpeg](https://github.com/marimor62/Midtermproject-Housing/blob/main/real-state-project.jpeg?raw=true)
 
-#### Scenario
+### Scenario
 
 You are working as an analyst for a real estate company. Your company wants to build a machine learning model to predict the selling prices of houses based on a variety of features on which the value of the house is evaluated.
 
-#### Objective
+### Objective
 
 Your job is to build a model that will predict the price of a house based on features provided in the dataset. Senior management also wants to explore the characteristics of the houses using some business intelligence tools. One of those parameters includes understanding which factors are responsible for higher property value - $650K and above.
 
-#### Dataset
+### Dataset
 All the necessary files, as well as the dataset, can be found in the following repository: [Mid-bootcamp project - Regression.](https://github.com/ironhack-edu/data_mid_bootcamp_project_regression)
 
 The dataset consists of information on 22,000 properties. The dataset consists of historic data of houses sold between May 2014 to May 2015.
@@ -33,15 +33,15 @@ We encourage you to thoroughly understand your data and take the necessary steps
 
 Since this is a classification model, you can use linear regression for classification for building a model. You are also encouraged to use other models in your project including KNN, decision trees for regression.
 
-#### **1. Explore the data**
+###  **1. Explore the data**
 To **explore the data**, you can use the techniques that have been discussed in class. Some of them include using the describe method, checking null values, using Matplotlib and Seaborn for developing visualizations.
 
 The data has many categorical and numerical variables. Explore the nature of data for these variables before you start with the data cleaning process and then data pre-processing (scaling numerical variables and encoding categorical variables).
 
-#### **2. Build a Model**
+### **2. Build a Model**
 Use different models to compare the accuracies and find the model that best fits your data. You can use the measures of accuracies that have been discussed in class. Please note that while comparing different models, make sure you use the same measure of accuracy as a benchmark.
 
-#### **3. Visualize**
+### **3. Visualize**
 You will use Tableau to visually explore the data further. The questions have been provided in this file.
 
 Deliverables
@@ -55,7 +55,7 @@ Critical Thinking
 Communication
 Transparency
 Thoroughness
-#### **Rubrics**
+### **Rubrics**
 [These are the rubrics](https://education-team-2020.s3-eu-west-1.amazonaws.com/data-analytics/DATA2020-MidBootcamp+Project+Rubrics+-+Sheet1.pdf) we use to assess your work.
 
 Tips & Tricks
