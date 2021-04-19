@@ -1,3 +1,5 @@
+![tableau_picture](https://github.com/marimor62/Midtermproject-Housing/blob/main/Tableau/tableau.png)
+
 # Tableau - Regression
 
 Tableau Questions:
