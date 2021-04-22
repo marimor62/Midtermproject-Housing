@@ -61,6 +61,7 @@ and our accuracy score R2 was relatively close to 1, so the model performs well,
 
 <a id='section6'></a>
 ### Tableau
+[Link to tableau story](https://public.tableau.com/profile/marian.moreno#!/vizhome/Book1_16190202108450/Story1)
 
 * Our assignment also included visualization with Tableau. We aimed to visualize our findings in a way that a non-technical audience would understand while maintaning a style that is both pleasing and unequivocal.
 
