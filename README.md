@@ -44,7 +44,7 @@ We did not find any duplicated data but some of the houses were sold more than o
 * We also found a house with 33 rooms - outlier or typo? We figured that a house with 33 rooms could be a hostel or hotel but then we noticed that the 33 rooms are located on just one floor with around 100 sqm. This clearly has to be an error, because it is physically unlikely. This piece of data seems to be a typo and it should actually be 3 bedrooms.
 * We clarified the definitions of the feature "bathrooms":
 
-<img src="../images/bathrooms definition.png"/>
+<img src="bathrooms definition.png"/>
 
 * We decided to extract the month and quarter (not the year) as they will be more interesting for later analysis.
 
@@ -54,9 +54,9 @@ We did not find any duplicated data but some of the houses were sold more than o
 * We proceeded to realize the first iteration of our Machine Learning Model,
 and our accuracy score R2 was relatively close to 1, so the model performs well, but we wanted to improved it.
 * In the second iteration we did a preprocessing: We went through the standardization using StandardScaler to rescale and OneHotEncoder to process the categoricals. We got a better R2:
-<img src="../images/r2.png"/>
+<img src="r2.png"/>
 * We went through a third iteration, this time we did a rescale using the logarithmic method and we normalized the data using the Dummies Encoder
-<img src="../images/r2_3.png"/>
+<img src="r2.png"/>
 
 
 <a id='section6'></a>
@@ -64,7 +64,7 @@ and our accuracy score R2 was relatively close to 1, so the model performs well,
 
 * Our assignment also included visualization with Tableau. We aimed to visualize our findings in a way that a non-technical audience would understand while maintaning a style that is both pleasing and unequivocal.
 
-<img src="../images/tableau1.png"/>
+<img src="tableau1.png"/>
 
 
 
