@@ -1,70 +1,73 @@
 # Case Study: Regression
 
 ![real-state-project.jpeg](https://github.com/marimor62/Midtermproject-Housing/blob/main/real-state-project.jpeg?raw=true)
+Colaborators [Marian Moreno](https://github.com/marimor62) and [Antonio Saleme](https://github.com/antonio-datahack)
 
+### Index:
+
+* [Scenario](#section1)
+* [Objetive](#section2)
+* [Approach](#section3)
+* [First ideas](#section4)
+* [In-Depth Analysis](#section5)
+* [Conclusions](#section6)
+* [Tableau](https://github.com/marimor62/Midtermproject-Housing/tree/main/Tableau)
+* [SQL](https://github.com/marimor62/Midtermproject-Housing/tree/main/SQL)
+
+
+<a id='section1'></a>
 ### Scenario
 
-You are working as an analyst for a real estate company. Your company wants to build a machine learning model to predict the selling prices of houses based on a variety of features on which the value of the house is evaluated.
-
+In this project we are working as analysts for a real estate company. Our company "Luna Lovegood"  created a machine learning model to predict the selling prices of houses based on a variety of features on which the value of the house is evaluated.
+<a id='section2'></a>
 ### Objective
 
-Your job is to build a model that will predict the price of a house based on features provided in the dataset. Senior management also wants to explore the characteristics of the houses using some business intelligence tools. One of those parameters includes understanding which factors are responsible for higher property value - $650K and above.
+The senior management of the real estate company also wants to explore the characteristics of the houses using some business intelligence tools. One of those parameters includes understanding which factors are responsible for higher property value - $650K and above.
 
-### Dataset
-All the necessary files, as well as the dataset, can be found in the following repository: [Mid-bootcamp project - Regression.](https://github.com/ironhack-edu/data_mid_bootcamp_project_regression)
+<a id='section3'></a>
+### Approach
 
-The dataset consists of information on 22,000 properties. The dataset consists of historic data of houses sold between May 2014 to May 2015.
+The dataset we used consists of information on 22,000 properties and contains historic data of houses sold between May 2014 to May 2015.
+Our first approach consisted of:
+                                * Importing the data
+                                * Exploring the data (EDA Method)
+                                * Data wrangling
+                                * Data cleaning
+                                * Check for multicolinearity
 
-These are the definitions of data points provided:
+ <a id='section4'></a>
+### First ideas
 
-Note: For some of the variables are self-explanatory, no definition has been provided.
+* The total dataset consited not of 22,000 rows but of 21,597 rows.
+We did not find any duplicated data but some of the houses were sold more than once during the time period between May 2014 to May 2015. As we wanted to predict the price of houses regarding different features such as the year when it was sold, there was no need to drop or modify these rows.
+* We found a share of renovated houses of 4.23%.
+* We also found a house with 33 rooms - outlier or typo? We figured that a house with 33 rooms could be a hostel or hotel but then we noticed that the 33 rooms are located on just one floor with around 100 sqm. This clearly has to be an error, because it is physically unlikely. This piece of data seems to be a typo and it should actually be 3 bedrooms.
+* We clarified the definitions of the feature "bathrooms":
 
-* **Id:** Unique identification number for the property
-* **date:** the date the house was sold
-* **price:** the price of the house
-* **waterfront:** the house which has a view to a waterfront
-* **condition:** How good the condition is (Overall). 1 indicates worn-out property and 5 excellent.
-* **grade:** Overall grade given to the housing unit, based on the King County grading system. 1 poor, 13 excellent.
-* **Sqft_above:** square footage of house apart from the basement
-* **Sqft_living15:** Living room area in 2015(implies-- some renovations) This might or might not have affected the lotSize area.
-* **Sqft_lot15:** lotSize area in 2015(implies-- some renovations)
-Expected Outcomes
-We encourage you to thoroughly understand your data and take the necessary steps to prepare your data for modeling before building exploratory or predictive models.
+<img src="../images/bathrooms definition.png"/>
 
-Since this is a classification model, you can use linear regression for classification for building a model. You are also encouraged to use other models in your project including KNN, decision trees for regression.
+* We decided to extract the month and quarter (not the year) as they will be more interesting for later analysis.
 
-###  **1. Explore the data**
-To **explore the data**, you can use the techniques that have been discussed in class. Some of them include using the describe method, checking null values, using Matplotlib and Seaborn for developing visualizations.
+<a id='section5'></a>
+### In-Depth Analysis
 
-The data has many categorical and numerical variables. Explore the nature of data for these variables before you start with the data cleaning process and then data pre-processing (scaling numerical variables and encoding categorical variables).
-
-### **2. Build a Model**
-Use different models to compare the accuracies and find the model that best fits your data. You can use the measures of accuracies that have been discussed in class. Please note that while comparing different models, make sure you use the same measure of accuracy as a benchmark.
-
-### **3. Visualize**
-You will use Tableau to visually explore the data further. The questions have been provided in this file.
-
-Deliverables
-**A slides deck:** use [slides.com](https://slides.com/) for simple yet effective templates.
-**A presentation:** Your public presentation should last between 5 and 7 minutes.
-**SQL Queries:** Access the [SQL Questions file](https://github.com/ironhack-edu/data_mid_bootcamp_project_regression/blob/master/sql_questions_regression.md) and make sure you run these queries using SQL.
-**A Tableau Dashboard:** Follow the instructions in [this file](https://github.com/ironhack-edu/data_mid_bootcamp_project_regression/blob/master/tableau_regression.md) to build in Tableau.
-**Python code:** Your code will be reviewed. Make sure you follow the best practices explained in the class so far.
-Evaluation Criteria
-Critical Thinking
-Communication
-Transparency
-Thoroughness
-### **Rubrics**
-[These are the rubrics](https://education-team-2020.s3-eu-west-1.amazonaws.com/data-analytics/DATA2020-MidBootcamp+Project+Rubrics+-+Sheet1.pdf) we use to assess your work.
-
-Tips & Tricks
-Organize yourself (don’t get lost!). Respect deadlines.
-Ask for help but don’t forget that Google is your friend.
-Define a simple approach first. You never know how the data can betray you. :wink:
-Document your work.
-Learn about the problem and what research has been done before you.
-Before making a graph, think about what you want to represent.
+* We proceeded to realize the first iteration of our Machine Learning Model,
+and our accuracy score R2 was relatively close to 1, so the model performs well, but we wanted to improved it.
+* In the second iteration we did a preprocessing: We went through the standardization using StandardScaler to rescale and OneHotEncoder to process the categoricals. We got a better R2:
+<img src="../images/r2.png"/>
+* We went through a third iteration, this time we did a rescale using the logarithmic method and we normalized the data using the Dummies Encoder
+<img src="../images/r2_3.png"/>
 
 
-Midterm project Ironhack 
+<a id='section6'></a>
+### Tableau
+
+* Our assignment also included visualization with Tableau. We aimed to visualize our findings in a way that a non-technical audience would understand while maintaning a style that is both pleasing and unequivocal.
+
+<img src="../images/tableau1.png"/>
+
+
+
+### SQL
+
+By using SQL we tried to reach a deeper understanding of our dataset. We used queries to answer the questions posed by the real estate company. Follow the [link](https://github.com/marimor62/Midtermproject-Housing/blob/69d56c6d43351a4e1fe94910e53ff1ff00e6865f/SQL/proj_luna.sql) to dive into our queries. 
