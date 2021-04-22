@@ -24,6 +24,7 @@ In this project we are working as analysts for a real estate company. Our compan
 
 The senior management of the real estate company also wants to explore the characteristics of the houses using some business intelligence tools. One of those parameters includes understanding which factors are responsible for higher property value - $650K and above.
 We followed this workflow in Python in order to build the required model:
+![Get and explore the data_ using Pandas library.jpg]
 
 
 <a id='section3'></a>
