@@ -1,7 +1,7 @@
 # Case Study: Regression
 
 ![real-state-project.jpeg](images/real-state-project.jpeg)
-Colaborators [Marian Moreno](https://github.com/marimor62) and [Antonio Saleme](https://github.com/antonio-datahack)
+Colaborators [Marian Moreno](https://github.com/marimor62) and [Antonio Saleme](https://github.com/thusspokedata)
 
 ### Index:
 
